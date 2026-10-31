@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Vision and Strategy of the Babunty Devi Sahani Foundation (BDS Foundation) — Technology for Public Good. An emerging, independent initiative." />
+<title>Vision &amp; Strategy — Babunty Devi Sahani Foundation</title>
+<style>
+:root {
+  --site-primary: #245b4a;
+  --site-on-primary: #ffffff;
+  --site-secondary: #f0e6d4;
+  --site-on-secondary: #2b3028;
+  --site-background: #fbf8f1;
+  --site-on-background: #202820;
+  --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-heading: Georgia, "Times New Roman", serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  color-scheme: light dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--site-font-body); background: var(--site-background); color: var(--site-on-background); }
+#app { min-height: 100vh; width: 100%; border-radius: 0; background-color: light-dark(var(--site-background), #171d19); color: light-dark(var(--site-on-background), #edf1e9); overflow: hidden; }
+a { color: inherit; }
+.wrap { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--site-background) 92%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid color-mix(in srgb, var(--site-on-background) 12%, transparent); }
+.nav { display:flex; align-items:center; justify-content:space-between; min-height:76px; gap:24px; }
+.brand { display:flex; align-items:center; gap:12px; text-decoration:none; min-width:0; }
+.mark { width:42px; height:42px; display:grid; place-items:center; border-radius:50%; background:var(--site-primary); color:var(--site-on-primary); font-family:var(--site-font-heading); font-size:23px; flex:none; }
+.brand-name { font-family:var(--site-font-heading); font-size:17px; line-height:1.15; }
+.brand-sub { display:block; font-family:var(--site-font-body); font-size:10px; letter-spacing:.13em; text-transform:uppercase; opacity:.68; margin-top:4px; }
+.navlinks { display:flex; align-items:center; gap:28px; }
+.navlinks a { text-decoration:none; font-size:13px; opacity:.78; }
+.navlinks a:hover, .navlinks a.active { opacity:1; font-weight:600; }
+.nav-cta, .button { display:inline-flex; align-items:center; justify-content:center; gap:9px; border-radius:999px; padding:13px 20px; text-decoration:none; font-size:13px; font-weight:650; transition:transform .2s, background .2s; }
+.nav-cta, .button.primary { background:var(--site-primary); color:var(--site-on-primary); }
+.button.secondary { border:1px solid currentColor; }
+.button.light { background:#f0e6d4; color:#202820; }
+.button.outline-light { border:1px solid #ffffff66; color:#ffffff; }
+.button:hover, .nav-cta:hover { transform:translateY(-2px); }
+.menu-btn { display:none; border:1px solid currentColor; background:transparent; color:inherit; border-radius:999px; padding:9px 13px; }
+.eyebrow { font-size:11px; letter-spacing:.18em; text-transform:uppercase; font-weight:700; color:var(--site-primary); display:flex; align-items:center; gap:10px; }
+.eyebrow:before { content:""; width:28px; height:1px; background:currentColor; }
+h1,h2,h3 { font-family:var(--site-font-heading); font-weight:400; }
+.vision-hero { position:relative; padding:96px 0 88px; background:var(--site-primary); color:var(--site-on-primary); overflow:hidden; }
+.vision-hero-grid { display:grid; grid-template-columns:1.25fr .75fr; gap:60px; align-items:center; }
+.vision-hero .eyebrow { color:#e7d5ad; }
+.vision-hero h1 { font-size:clamp(44px, 6vw, 76px); line-height:1.03; letter-spacing:-.04em; margin:20px 0 14px; }
+.vision-subtitle { font-family:var(--site-font-heading); font-style:italic; font-size:clamp(22px, 2.8vw, 32px); color:#e7d5ad; margin:0 0 22px; }
+.vision-hero p { max-width:560px; font-size:17px; line-height:1.75; opacity:.88; margin:0; }
+.hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
+.venn-art { display:grid; place-items:center; }
+.venn-svg { width:min(320px, 75vw); height:auto; }
+.notice { padding:18px 0; background:var(--site-secondary); color:var(--site-on-secondary); font-size:12px; letter-spacing:.02em; border-bottom:1px solid color-mix(in srgb, var(--site-on-secondary) 10%, transparent); }
+.notice .wrap { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+.notice-link { font-weight:650; text-decoration:underline; text-underline-offset:3px; }
+section { padding:88px 0; border-bottom:1px solid color-mix(in srgb, var(--site-on-background) 8%, transparent); }
+.section-alt { background:color-mix(in srgb, var(--site-secondary) 55%, var(--site-background)); }
+.slide-meta { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:14px; }
+.slide-num { font-family:var(--site-font-heading); font-size:13px; opacity:.55; }
+.section-head { max-width:760px; margin-bottom:42px; }
+.section-head h2 { font-size:clamp(34px, 4.2vw, 52px); line-height:1.08; letter-spacing:-.035em; margin:14px 0 16px; }
+.section-head p { font-size:16px; line-height:1.8; opacity:.78; margin:0; }
+.grid-4 { display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; }
+.grid-2 { display:grid; grid-template-columns:repeat(2, 1fr); gap:18px; }
+.card { background:var(--site-background); border:1px solid color-mix(in srgb, var(--site-on-background) 10%, transparent); border-radius:20px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; }
+.section-alt .card { background:var(--site-background); }
+.card-tag { font-size:10px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--site-primary); margin-bottom:12px; }
+.card h3 { font-size:23px; line-height:1.22; margin:0 0 12px; }
+.card p { font-size:14px; line-height:1.7; opacity:.76; margin:0; }
+.footnote { margin-top:26px; font-size:14px; opacity:.72; line-height:1.7; }
+.vision-split { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+.vision-lead { font-size:19px; line-height:1.75; opacity:.86; margin:0; }
+.value-stack { display:grid; gap:12px; }
+.value-row { background:color-mix(in srgb, var(--site-secondary) 45%, var(--site-background)); border:1px solid color-mix(in srgb, var(--site-on-background) 10%, transparent); border-radius:16px; padding:18px 22px; }
+.value-row h3 { font-size:20px; margin:0 0 4px; }
+.value-row p { font-size:14px; margin:0; opacity:.75; line-height:1.6; }
+.loop-grid { display:grid; grid-template-columns:repeat(6, 1fr); gap:12px; margin-bottom:24px; }
+.loop-step { background:var(--site-background); border:1px solid color-mix(in srgb, var(--site-on-background) 12%, transparent); border-radius:18px; padding:22px 16px; text-align:center; }
+.loop-num { font-family:var(--site-font-heading); font-size:30px; color:var(--site-primary); display:block; margin-bottom:8px; }
+.loop-label { font-weight:650; font-size:15px; }
+.loop-caption { text-align:center; font-weight:650; font-size:14px; color:var(--site-primary); margin:18px 0 10px; }
+.portfolio-banner { margin-top:22px; background:var(--site-primary); color:var(--site-on-primary); border-radius:20px; padding:28px 32px; }
+.portfolio-banner h3 { font-size:24px; margin:0 0 10px; }
+.portfolio-banner p { margin:0; font-size:15px; line-height:1.75; opacity:.88; }
+.pill-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+.pill { padding:10px 18px; border-radius:999px; background:var(--site-secondary); color:var(--site-on-secondary); font-size:13px; font-weight:600; }
+.collab-section { background:var(--site-primary); color:var(--site-on-primary); border-bottom:none; }
+.collab-section .eyebrow { color:#e7d5ad; }
+.collab-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin:32px 0; }
+.collab-item { padding:18px 22px; border:1px solid #ffffff38; border-radius:14px; font-size:16px; font-weight:500; }
+.pdf-card { margin-top:36px; padding:28px 32px; background:#1c473a; border:1px solid #ffffff30; border-radius:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+.pdf-card h3 { font-size:24px; margin:0 0 6px; }
+.pdf-card p { margin:0; font-size:14px; opacity:.82; }
+footer { padding:28px 0; background:#17251f; color:#f6f3eb; }
+.footer-row { display:flex; justify-content:space-between; align-items:center; gap:20px; font-size:12px; opacity:.8; }
+.footer-row a { text-decoration:none; }
+.disclaimer { font-size:11px; opacity:.6; margin-top:10px; line-height:1.6; }
+@media (prefers-color-scheme: dark) {
+  #app { background-color:light-dark(var(--site-background), #171d19); color:light-dark(var(--site-on-background), #edf1e9); }
+  header { background:color-mix(in srgb, #171d19 92%, transparent); }
+  .notice { background:#2b382f; color:#f0eee5; }
+  .section-alt { background:#202a24; }
+  .card, .section-alt .card, .loop-step, .value-row { background:#171d19; }
+  .pill { background:#2b382f; color:#f0eee5; }
+}
+@media (max-width:920px) {
+  .grid-4 { grid-template-columns:repeat(2, 1fr); }
+  .loop-grid { grid-template-columns:repeat(3, 1fr); }
+  .collab-grid { grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width:800px) {
+  .navlinks { display:none; position:absolute; top:76px; left:0; right:0; padding:20px 24px 24px; background:var(--site-background); border-bottom:1px solid #8884; flex-direction:column; align-items:flex-start; gap:18px; }
+  .navlinks.open { display:flex; }
+  .menu-btn { display:block; }
+  .nav-cta { display:none; }
+  .vision-hero { padding:68px 0 56px; }
+  .vision-hero-grid, .vision-split, .grid-2 { grid-template-columns:1fr; gap:32px; }
+  section { padding:64px 0; }
+  .footer-row { flex-direction:column; align-items:flex-start; }
+}
+@media (max-width:540px) {
+  .grid-4, .collab-grid { grid-template-columns:1fr; }
+  .loop-grid { grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width:420px) { .wrap { width:calc(100% - 32px); } .brand-name { font-size:15px; } }
+</style>
+</head>
+<body>
+<div id="app">
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="../" aria-label="Babunty Devi Sahani Foundation home">
+      <span class="mark">B</span><span class="brand-name">Babunty Devi Sahani<span class="brand-sub">Technology for Public Good</span></span>
+    </a>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a href="../#story">Our story</a>
+      <a href="../#focus">Four pillars</a>
+      <a href="../#approach">Our approach</a>
+      <a href="./" class="active">Vision &amp; strategy</a>
+      <a href="../#contact">Connect</a>
+    </nav>
+    <a class="nav-cta" href="../BDS%20Foundation%20%E2%80%94%20Vision%20and%20Strategy.pdf" target="_blank" rel="noopener">Download PDF ↗</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Slide 1: Cover -->
+  <section class="vision-hero">
+    <div class="wrap vision-hero-grid">
+      <div>
+        <div class="eyebrow">Vision and Strategy · 01 / 10</div>
+        <h1>Babunty Devi Sahani Foundation</h1>
+        <p class="vision-subtitle">Technology for Public Good</p>
+        <p>A long-term vision for accessible, community-centered innovation—beginning with education and learning, while keeping the door open to broader public-interest technology.</p>
+        <div class="hero-actions">
+          <a class="button light" href="../BDS%20Foundation%20%E2%80%94%20Vision%20and%20Strategy.pdf" target="_blank" rel="noopener">View 10-slide presentation (PDF) ↗</a>
+          <a class="button outline-light" href="../">← Back to homepage</a>
+        </div>
+      </div>
+      <div class="venn-art" aria-hidden="true">
+        <svg class="venn-svg" viewBox="0 0 320 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="130" cy="120" r="82" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
+          <circle cx="195" cy="120" r="82" stroke="#e7d5ad" stroke-width="2" opacity="0.9"/>
+          <circle cx="162" cy="182" r="82" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="notice">
+    <div class="wrap">
+      <div><strong>Emerging initiative, not yet registered</strong> · Nothing on this page claims established impact, active funding, or formal charitable status.</div>
+      <a class="notice-link" href="../BDS%20Foundation%20%E2%80%94%20Vision%20and%20Strategy.pdf" target="_blank" rel="noopener">Open full PDF deck (10 slides) ↗</a>
+    </div>
+  </div>
+
+  <!-- Slide 2: Why We Exist -->
+  <section id="problems">
+    <div class="wrap">
+      <div class="slide-meta">
+        <div class="eyebrow">Why we exist</div>
+        <span class="slide-num">02 / 10</span>
+      </div>
+      <div class="section-head">
+        <h2>Problems worth investigating with communities.</h2>
+      </div>
+      <div class="grid-4">
+        <article class="card">
+          <div>
+            <h3>Unequal access to learning</h3>
+            <p>Who lacks access to quality learning, skills, and opportunities, and why?</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <h3>Stretched frontline workers</h3>
+            <p>Where do educators and social workers lack practical digital support?</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <h3>Tools that miss the context</h3>
+            <p>Which digital tools are not designed for local languages, devices, and needs?</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <h3>Fragmented public-interest tech</h3>
+            <p>Where is useful technology rebuilt repeatedly instead of shared and reused?</p>
+          </div>
+        </article>
+      </div>
+      <p class="footnote">These are questions to investigate and validate, not established findings. We will test each with the people affected.</p>
+    </div>
+  </section>
+
+  <!-- Slide 3: Our Vision -->
+  <section class="section-alt" id="vision">
+    <div class="wrap">
+      <div class="slide-meta">
+        <div class="eyebrow">Our vision</div>
+        <span class="slide-num">03 / 10</span>
+      </div>
+      <div class="section-head">
+        <h2>Technology that people can access, understand, and shape.</h2>
+      </div>
+      <div class="vision-split">
+        <p class="vision-lead">We want to help create a future where useful technology is built with communities, not only for them, and where responsible AI supports educators and social workers rather than replacing them.</p>
+        <div class="value-stack">
+          <div class="value-row">
+            <h3>Accessible</h3>
+            <p>Usable across devices, languages, and abilities.</p>
+          </div>
+          <div class="value-row">
+            <h3>Community-centered</h3>
+            <p>Needs guide every technology decision.</p>
+          </div>
+          <div class="value-row">
+            <h3>Responsible</h3>
+            <p>Privacy-conscious AI with people in control.</p>
+          </div>
+          <div class="value-row">
+            <h3>Open</h3>
+            <p>Shared tools and learning resources where possible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 4: Four Impact Pillars -->
+  <section id="pillars">
+    <div class="wrap">
+      <div class="slide-meta">
+        <div class="eyebrow">Four impact pillars</div>
+        <span class="slide-num">04 / 10</span>
+      </div>
+      <div class="section-head">
+        <h2>One mission. Four pillars.</h2>
+      </div>
+      <div class="grid-4">
+        <article class="card">
+          <div>
+            <div class="card-tag">01 · First Focus</div>
+            <h3>Education and Learning</h3>
+            <p>Tools and resources that improve access to learning, skills, knowledge, and opportunities.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <div class="card-tag">02 · Pillar</div>
+            <h3>Social Impact and Community Empowerment</h3>
+            <p>Technology that helps communities, social workers, educators, and grassroots organizations address real challenges.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <div class="card-tag">03 · Pillar</div>
+            <h3>Responsible and Accessible AI</h3>
+            <p>Human-centered AI that is useful, understandable, accessible, and appropriate for underserved communities.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <div class="card-tag">04 · Pillar</div>
+            <h3>Open Technology and Sustainability</h3>
+            <p>Open-source tools, reusable infrastructure, public learning resources, and sustainable development approaches.</p>
+          </div>
+        </article>
+      </div>
+      <p class="footnote">Many opportunities to create public good sit under these pillars.</p>
+    </div>
+  </section>
+
+  <!-- Slide 5: Our Approach -->
+  <section class="section-alt" id="approach">
+    <div class="wrap">
+      <div class="slide-meta">
+        <div class="eyebrow">Our approach</div>
+        <span class="slide-num">05 / 10</span>
+      </div>
+      <div class="section-head">
+        <h2>Community needs guide technology decisions.</h2>
+      </div>
+      <div class="loop-grid">
+        <div class="loop-step"><span class="loop-num">1</span><span class="loop-label">Listen</span></div>
+        <div class="loop-step"><span class="loop-num">2</span><span class="loop-label">Understand</span></div>
+        <div class="loop-step"><span class="loop-num">3</span><span class="loop-label">Build</span></div>
+        <div class="loop-step"><span class="loop-num">4</span><span class="loop-label">Test</span></div>
+        <div class="loop-step"><span class="loop-num">5</span><span class="loop-label">Share</span></div>
+        <div class="loop-step"><span class="loop-num">6</span><span class="loop-label">Improve</span></div>
+      </div>
+      <div class="loop-caption">Listen → Understand → Build → Test → Share → Improve, then back to Listen</div>
+      <p class="footnote" style="text-align:center;margin-top:8px">We test with intended users, protect privacy, design for accessibility, and share what we learn openly.</p>
+    </div>
+  </section>
+
+  <!-- Slide 6: A Portfolio, Not a Single Product -->
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="slide-meta">
+        <div class="eyebrow">A portfolio, not a single product</div>
+        <span class="slide-num">06 / 10</span>
+      </div>
+      <div class="section-head">
+        <h2>Many initiatives under one mission.</h2>
+      </div>
+      <div class="grid-4">
+        <article class="card">
+          <div>
+            <h3>Independent applications</h3>
+            <p>Focused tools for specific users.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <h3>Open-source tools</h3>
+            <p>Reusable software shared publicly.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <h3>Research efforts</h3>
+            <p>Evidence on what works and for whom.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <h3>Community initiatives</h3>
+            <p>Work led with local organizations.</p>
+          </div>
+        </article>
+      </div>
+      <div class="portfolio-banner">
+        <h3>Disciplined scope for every initiative</h3>
+        <p>Every project defines its own <strong>problem statement</strong>, <strong>intended users</strong>, <strong>measurable outcomes</strong>, and <strong>sustainability plan</strong> before moving forward.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 7: Initial Areas of Exploration -->
+  <section class="section-alt" id="exploration">
+    <div class="wrap">
+      <div class="slide-meta">
+        <div class="eyebrow">Initial areas of exploration</div>
+        <span class="slide-num">07 / 10</span>
+      </div>
+      <div class="section-head">
+        <h2>Potential directions, not established programs.</h2>
+      </div>
+      <div class="grid-4">
+        <article class="card">
+          <div>
+            <div class="card-tag">Potential direction</div>
+            <h3>Accessible AI for educators and social workers</h3>
+            <p>Practical assistance that keeps professionals in charge.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <div class="card-tag">Potential direction</div>
+            <h3>Learning tools for underserved young people</h3>
+            <p>Foundational skills and literacy support.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <div class="card-tag">Potential direction</div>
+            <h3>Community problem-solving systems</h3>
+            <p>Ways for groups to surface and track local needs.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <div class="card-tag">Potential direction</div>
+            <h3>Open technology resources</h3>
+            <p>Shared tools and public learning materials.</p>
+          </div>
+        </article>
+      </div>
+      <p class="footnote">Each direction will be validated with communities before any build begins.</p>
+    </div>
+  </section>
+
+  <!-- Slide 8: Why This Initiative Can Build -->
+  <section id="capability">
+    <div class="wrap">
+      <div class="slide-meta">
+        <div class="eyebrow">Why this initiative can build</div>
+        <span class="slide-num">08 / 10</span>
+      </div>
+      <div class="section-head">
+        <h2>Technical experience, kept distinct from the foundation.</h2>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <div>
+            <h3>Independent work, not foundation-owned</h3>
+            <p>The founder has published more than 23 Android applications as an independent builder.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <h3>Organizational work</h3>
+            <p>Education and community-focused technology built in a professional NGO setting, as part of an organizational team.</p>
+          </div>
+        </article>
+      </div>
+      <div class="pill-row">
+        <span class="pill">Software engineering</span>
+        <span class="pill">Android apps</span>
+        <span class="pill">AI systems</span>
+        <span class="pill">Backend infrastructure</span>
+        <span class="pill">Speech technology</span>
+      </div>
+      <p class="footnote">Also experienced in education-focused products. Past work shows capability; it is not a claim of impact.</p>
+    </div>
+  </section>
+
+  <!-- Slide 9: Roadmap -->
+  <section class="section-alt" id="roadmap">
+    <div class="wrap">
+      <div class="slide-meta">
+        <div class="eyebrow">Roadmap · Proposed, no dates</div>
+        <span class="slide-num">09 / 10</span>
+      </div>
+      <div class="section-head">
+        <h2>Build the foundation before scaling the ambition.</h2>
+      </div>
+      <div class="grid-4">
+        <article class="card">
+          <div>
+            <div class="card-tag">Phase 1</div>
+            <h3>Validate &amp; consult</h3>
+            <p>Validate problems and consult communities.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <div class="card-tag">Phase 2</div>
+            <h3>Prototype &amp; test</h3>
+            <p>Build and test small prototypes.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <div class="card-tag">Phase 3</div>
+            <h3>Publish &amp; evaluate</h3>
+            <p>Publish useful tools and evaluate results.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div>
+            <div class="card-tag">Phase 4</div>
+            <h3>Partner &amp; formalize</h3>
+            <p>Establish partnerships, strengthen governance, and pursue sustainable funding.</p>
+          </div>
+        </article>
+      </div>
+      <p class="footnote">A proposed plan. Nothing here has been completed, funded, or agreed with partners.</p>
+    </div>
+  </section>
+
+  <!-- Slide 10: Invitation to Collaborate -->
+  <section class="collab-section" id="collaborate">
+    <div class="wrap">
+      <div class="slide-meta">
+        <div class="eyebrow">Invitation to collaborate</div>
+        <span class="slide-num" style="color:#e7d5ad;opacity:.8">10 / 10</span>
+      </div>
+      <div class="section-head">
+        <h2>Help us build public-interest technology.</h2>
+        <p>Identify problems · Test solutions · Share knowledge · Build sustainable technology</p>
+      </div>
+      <div class="collab-grid">
+        <div class="collab-item">Educators</div>
+        <div class="collab-item">Social workers</div>
+        <div class="collab-item">Researchers</div>
+        <div class="collab-item">Open-source contributors</div>
+        <div class="collab-item">Civil-society organizations</div>
+        <div class="collab-item">Funders (future stage)</div>
+      </div>
+      <div class="pdf-card">
+        <div>
+          <h3>BDS Foundation — Vision and Strategy (PDF)</h3>
+          <p>Download or view the complete 10-slide presentation deck, or reach out at <a href="mailto:contact@babuntydevisahani.org?subject=Hello%20-%20BDS%20Foundation%20Vision" style="text-decoration:underline">contact@babuntydevisahani.org</a>.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="button light" href="../BDS%20Foundation%20%E2%80%94%20Vision%20and%20Strategy.pdf" target="_blank" rel="noopener">Open PDF presentation ↗</a>
+          <a class="button outline-light" href="mailto:contact@babuntydevisahani.org?subject=Hello%20-%20BDS%20Foundation%20Vision">Email us ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <span>© 2026 Babunty Devi Sahani Foundation · Technology for Public Good</span>
+      <div style="display:flex;gap:20px">
+        <a href="../">Homepage</a>
+        <a href="../BDS%20Foundation%20%E2%80%94%20Vision%20and%20Strategy.pdf" target="_blank" rel="noopener">Vision PDF ↗</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+    <div class="disclaimer">Babunty Devi Sahani Foundation · Emerging initiative, not yet registered. Not a registered charitable entity. This website does not represent a request for donations.</div>
+  </div>
+</footer>
+</div>
+<script>
+const menuButton = document.getElementById('menuBtn');
+const nav = document.getElementById('navlinks');
+menuButton.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+});
+nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  nav.classList.remove('open');
+  menuButton.setAttribute('aria-expanded', 'false');
+}));
+</script>
+</body>
+</html>
